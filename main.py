@@ -1,6 +1,6 @@
 import bpy
 
-# Mevcut sahneyi temizle
+# Mevcut sahneyi temizlemek için
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
@@ -10,7 +10,6 @@ def create_sphere(name, location, radius, color=(1, 1, 1, 1)):
     obj = bpy.context.object
     obj.name = name
     
-    # Malzeme ekleyelim
     mat = bpy.data.materials.new(name + "_Material")
     mat.diffuse_color = color
     obj.data.materials.append(mat)
